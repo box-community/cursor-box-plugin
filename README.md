@@ -25,6 +25,15 @@ and [create a new Custom App with OAuth 2.0 authentication](https://developer.bo
 Once created, grab your **Client ID** and **Client Secret** from the app's
 Configuration tab.
 
+Under the **OAuth 2.0 Redirect URI** section of the Configuration tab, add the
+following redirect URI:
+
+```
+cursor://anysphere.cursor-mcp/oauth/callback
+```
+
+This allows Cursor to complete the OAuth authentication flow with Box.
+
 ### 2. Set your environment variables
 
 The plugin reads credentials from two environment variables:
