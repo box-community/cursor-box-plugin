@@ -1,0 +1,21 @@
+{
+  "name": "box",
+  "displayName": "Box",
+  "version": "0.1.0",
+  "description": "Cursor plugin for Box — search, read, and manage content in Box, and leverage Box AI for Q&A, summarization, and extraction via the Box MCP server.",
+  "author": {
+    "name": "Box"
+  },
+  "repository": "https://github.com/box-community/cursor-box-plugin",
+  "homepage": "https://developer.box.com/guides/box-mcp",
+  "license": "MIT",
+  "keywords": [
+    "box",
+    "ai",
+    "box-ai",
+    "cloud-storage",
+    "mcp",
+    "file-management"
+  ],
+  "logo": "assets/logo.svg"
+}
