@@ -44,15 +44,70 @@ export BOX_CLIENT_SECRET="your_client_secret"
 ```
 
 Add these to your shell profile (`.zshrc`, `.bashrc`, etc.) or use whatever
-secrets management your team prefers. Don't hardcode them anywhere.
+secrets management your team prefers.
+
+Alternatively, you can skip environment variables and set your credentials
+directly in Cursor's MCP config file (`~/.cursor/mcp.json`):
+
+```json
+{
+    "mcpServers": {
+        "box": {
+            "url": "https://mcp.box.com",
+            "auth": {
+                "CLIENT_ID": "your_client_id",
+                "CLIENT_SECRET": "your_client_secret"
+            }
+        }
+    }
+}
+```
+
+If you go this route, be careful not to commit your credentials to version
+control.
 
 ### 3. Install the plugin
 
-Install the Box plugin from the Cursor Marketplace, or add this repository
-directly in Cursor's plugin settings.
+**From the Marketplace (recommended):**
+Install the Box plugin from the [Cursor Marketplace](https://cursor.com/marketplace).
 
-That's it — the MCP server connection, skill, and rules are all configured
-automatically.
+**Manual installation:**
+If you prefer to test a local copy, you can install it by copying
+the plugin files into Cursor's local plugin directory and registering it:
+
+1. Clone this repository and copy it into `~/.cursor/plugins/`:
+   ```sh
+   git clone https://github.com/box-community/cursor-box-plugin.git
+   cp -R cursor-box-plugin ~/.cursor/plugins/box
+   ```
+2. Register the plugin in `~/.claude/plugins/installed_plugins.json` (create
+   the file if it doesn't exist):
+   ```json
+   {
+     "plugins": {
+       "box@local": [
+         {
+           "scope": "user",
+           "installPath": "/Users/<you>/.cursor/plugins/box"
+         }
+       ]
+     }
+   }
+   ```
+3. Enable it in `~/.claude/settings.json`:
+   ```json
+   {
+     "enabledPlugins": {
+       "box@local": true
+     }
+   }
+   ```
+4. In Cursor Settings, make sure **Include third-party Plugins, Skills, and
+   other configs** is enabled under **Features**.
+5. Restart Cursor.
+
+The MCP server connection, skill, and rules are all configured automatically
+once the plugin is installed.
 
 ## What's included
 

@@ -53,3 +53,11 @@ the generated documents should be placed in. Do not assume a default location.
 Before uploading to a folder that is externally shared, warn the user that the
 upload may be blocked by Box and suggest using an internal folder instead. Let
 the user decide whether to proceed.
+
+## Be transparent about tool limitations
+
+If a task cannot be completed with the available Box MCP tools, tell the user
+directly. Do not attempt workarounds outside the MCP server such as searching
+external documentation or calling unsupported parameters. Instead, explain what
+the tools can and cannot do, and suggest alternatives that are possible with
+the current tool set.
