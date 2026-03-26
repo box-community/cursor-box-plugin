@@ -1,3 +1,6 @@
+> [!IMPORTANT]
+> **This repository is no longer maintained.** It has been consolidated into [`box/box-for-ai`](https://github.com/box/box-for-ai), which includes this plugin alongside skills and support for additional platforms. Please refer to that repo for the latest updates and installation instructions.
+
 # Box Plugin for Cursor
 
 Search, read, and manage your Box content directly from Cursor — plus tap into
